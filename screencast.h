@@ -171,6 +171,8 @@ private slots:
     QString getRecordWidth();
     void setRecordHeight( QString value );
     QString getRecordHeight();
+
+    QIcon rotateIcon(QString ico);
     
 private:
     QTabWidget *tabWidget;

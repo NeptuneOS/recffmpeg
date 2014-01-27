@@ -32,17 +32,6 @@ screencast::screencast()
     ProgName = "Recffmpeg";
     Version = "1.8.5";  
     Version = Version + " " + Beta;
-
-    homepage = "<a href='http://www.kohaupt-online.de/hp'>" + tr( "Homepage" ) + "</a>";
-    
-    QString mailingliste = "<a href ='mailto:vokoscreen@googlegroups.com?subject=vokoscreen ";
-    mailingliste = mailingliste.append( Version ).append( "'" ).append( ">" + tr( "Mailinglist" ) + "</a>" );
-    
-    email = "<a href ='mailto:tux@kohaupt-online.de?subject=vokoscreen ";
-    email = email.append( Version ).append( "'" ).append( ">" + tr( "Support" ) + "</a>" );
-
-    QString emaildeveloper = "<a href ='mailto:vkohaupt@freenet.de?subject=vokoscreen ";
-    emaildeveloper = emaildeveloper.append( Version ).append( "'" ).append( ">" + tr( "Developer" ) + "</a>" );
     
     screencast::setWindowTitle( ProgName + " " + Version );
 
@@ -67,7 +56,7 @@ screencast::screencast()
     this->setCentralWidget( centralWidget );
 
     tabWidget = new QTabWidget( centralWidget );
-    tabWidget->setGeometry( 10, 0, 480, 210 );
+    tabWidget->setGeometry( 0, 0, 500, 210 );
     tabWidget->setIconSize( QSize( 24, 24 ) );
     tabWidget->setTabPosition(QTabWidget::West);
 
@@ -76,7 +65,7 @@ screencast::screencast()
     frame->setGeometry( 10, 10, 300, 200 );
     frame->show();
     tabWidget->addTab( frame, "" );
-    tabWidget->setTabIcon( 0, QIcon( ":/pictures/monitor.png" ) );
+    tabWidget->setTabIcon( 0, rotateIcon(":/pictures/monitor.png") );
     QFont qfont = frame->font();
     qfont.setPixelSize( 12 );
     frame->setFont( qfont );
@@ -161,7 +150,7 @@ screencast::screencast()
     TabWidgetAudioFrame->setGeometry( 120, 0, 300, 290 );
     TabWidgetAudioFrame->show();
     tabWidget->addTab( TabWidgetAudioFrame, "" );
-    tabWidget->setTabIcon( 1, QIcon( ":/pictures/micro.png" ) );
+    tabWidget->setTabIcon( 1, rotateIcon(":/pictures/micro.png") );
     qfont = TabWidgetAudioFrame->font();
     qfont.setPixelSize( 12 );
     TabWidgetAudioFrame->setFont( qfont );
@@ -207,7 +196,7 @@ screencast::screencast()
     TabWidgetVideoOptionFrame->setGeometry( 120, 0, 300, 200 );
     TabWidgetVideoOptionFrame->show();
     tabWidget->addTab( TabWidgetVideoOptionFrame, "" );
-    tabWidget->setTabIcon( 2, QIcon( ":/pictures/videooptionen.png" ) );
+    tabWidget->setTabIcon( 2, rotateIcon(":/pictures/videooptionen.png") );
     qfont = TabWidgetVideoOptionFrame->font();
     qfont.setPixelSize( 12 );
     TabWidgetVideoOptionFrame->setFont( qfont );
@@ -272,77 +261,6 @@ screencast::screencast()
     HideMouseCheckbox->setText( tr( "Do not record mouse cursor" ) );
     HideMouseCheckbox->show();
 
-    // Tab 6 About *********************************************************
-    QFrame *TabWidgetAboutFrame = new QFrame(this);
-    TabWidgetAboutFrame->show();
-    tabWidget->addTab( TabWidgetAboutFrame, "" );
-    tabWidget->setTabIcon( 4, QIcon( ":/pictures/about.png" ) );
-    tabWidget->show();
-    qfont = TabWidgetAboutFrame->font();
-    qfont.setPixelSize( 12 );
-    TabWidgetAboutFrame->setFont( qfont );
-
-    int labelWidth = tabWidget->width() / 2;
-    int leftSide = 0;
-    int rightSide = tabWidget->width() / 2;
-    
-    //QLabel* labelWebSite = new QLabel( TabWidgetAboutFrame );
-    QLabel* labelWebSite = new QLabel( TabWidgetAboutFrame );
-    labelWebSite->setGeometry( leftSide, 10, labelWidth, 22 );
-    labelWebSite->setText( homepage );
-    labelWebSite->setOpenExternalLinks( true );
-    labelWebSite->setAlignment( Qt::AlignCenter );
-    labelWebSite->show();
-
-//    QLabel* labelMailinglisteMail = new QLabel( TabWidgetAboutFrame );
-//    labelMailinglisteMail->setText( mailingliste );
-//    labelMailinglisteMail->setGeometry( leftSide, 30, labelWidth, 22 );
-//    labelMailinglisteMail->setOpenExternalLinks( true );
-//    labelMailinglisteMail->setAlignment( Qt::AlignCenter );
-//    labelMailinglisteMail->show();
-
-    QLabel* labelMail = new QLabel( TabWidgetAboutFrame );
-    labelMail->setGeometry( leftSide, 50, labelWidth, 22 );
-    labelMail->setText( email );
-    labelMail->setOpenExternalLinks( true );
-    labelMail->setAlignment( Qt::AlignCenter );    
-    labelMail->show();
-
-    QLabel* labelDeveLoperMail = new QLabel( TabWidgetAboutFrame );
-    labelDeveLoperMail->setText( emaildeveloper );
-    labelDeveLoperMail->setGeometry( leftSide, 70, labelWidth, 22 );
-    labelDeveLoperMail->setOpenExternalLinks( true );
-    labelDeveLoperMail->setAlignment( Qt::AlignCenter );    
-    labelDeveLoperMail->show();
-    
-    QLabel* labelLanguageUrl = new QLabel( TabWidgetAboutFrame );
-    labelLanguageUrl->setText( "<a href='https://www.transifex.com/projects/p/vokoscreen/'>" + tr( "Translations" ) + "</a>" );
-    labelLanguageUrl->setGeometry( rightSide, 10, labelWidth, 22 );
-    labelLanguageUrl->setOpenExternalLinks( true );
-    labelLanguageUrl->setAlignment( Qt::AlignCenter );    
-    labelLanguageUrl->show();
-    
-    QLabel* labelOpensuseBetaUrl = new QLabel( TabWidgetAboutFrame );
-    labelOpensuseBetaUrl->setText( "<a href='http://linuxecke.volkoh.de/vokoscreen/vokoscreen.html'>" + tr( "Beta openSUSE" ) + "</a>" );
-    labelOpensuseBetaUrl->setGeometry( rightSide, 30, labelWidth, 22 );
-    labelOpensuseBetaUrl->setOpenExternalLinks( true );
-    labelOpensuseBetaUrl->setAlignment( Qt::AlignCenter );    
-    labelOpensuseBetaUrl->show();
-
-    QLabel* labelUbuntuBetaUrl = new QLabel( TabWidgetAboutFrame );
-    labelUbuntuBetaUrl->setText( "<a href='http://ppa.launchpad.net/vokoscreen-dev/vokoscreen-daily/ubuntu/pool/main/v/vokoscreen/'>" + tr( "Beta Ubuntu" ) + "</a>" );
-    labelUbuntuBetaUrl->setGeometry( rightSide, 50, labelWidth, 22 );
-    labelUbuntuBetaUrl->setOpenExternalLinks( true );
-    labelUbuntuBetaUrl->setAlignment( Qt::AlignCenter );    
-    labelUbuntuBetaUrl->show();
-    
-    QLabel * labelDonateUrl = new QLabel( TabWidgetAboutFrame );
-    labelDonateUrl->setText( "<a href='http://www.kohaupt-online.de/hp/spende.html'>" + tr( "Donate" ) + "</a>" );
-    labelDonateUrl->setGeometry( 0, 100, tabWidget->width(), 22 );
-    labelDonateUrl->setOpenExternalLinks( true );
-    labelDonateUrl->setAlignment( Qt::AlignCenter );    
-    labelDonateUrl->show();
-
     // End Tabs *************************************************************
 
     recordButton = new QPushButton( centralWidget );
@@ -354,7 +272,7 @@ screencast::screencast()
     qfont.setPixelSize( 14 );
     qfont.setBold( true );
     recordButton->setFont( qfont );
-    recordButton->setGeometry( 70, 220, 90, 30 );
+    recordButton->setGeometry( 70, 220, 100, 30 );
     recordButton->show();
     connect( recordButton, SIGNAL( clicked() ), SLOT( preRecord() ) );
 
@@ -363,11 +281,7 @@ screencast::screencast()
     StopButton->setToolTip( "CTRL+SHIFT+F11" );
     QIcon StopButtonIcon;
     StopButton->setIcon(StopButtonIcon.fromTheme("media-playback-stop"));
-//    qfont = StopButton->font();
-//    qfont.setPixelSize( 14 );
-//    qfont.setBold( true );
-//    StopButton->setFont( qfont );
-    StopButton->setGeometry( 180, 220, 90, 30 );
+    StopButton->setGeometry( 180, 220, 100, 30 );
     StopButton->setEnabled( false );
     StopButton->show();  
     connect( StopButton, SIGNAL( clicked() ), SLOT( Stop() ) );
@@ -377,11 +291,7 @@ screencast::screencast()
     PauseButton->setToolTip( "CTRL+SHIFT+F12" );
     QIcon PauseButtonIcon;
     PauseButton->setIcon(PauseButtonIcon.fromTheme("media-playback-pause"));
-//    qfont = PauseButton->font();
-//    qfont.setPixelSize( 14 );
-//    qfont.setBold( true );
-//    PauseButton->setFont( qfont );
-    PauseButton->setGeometry( 290, 220, 90, 30 );
+    PauseButton->setGeometry( 290, 220, 100, 30 );
     PauseButton->setCheckable( true );
     PauseButton->setEnabled( false );
     if ( needProgram( "mkvmerge" ) )
@@ -395,36 +305,9 @@ screencast::screencast()
     PlayButton->setToolTip( tr( "Play last Video" ) );
     QIcon PlayButtonIcon;
     PlayButton->setIcon(PlayButtonIcon.fromTheme("media-playback-start"));
-//    qfont = PlayButton->font();
-//    qfont.setPixelSize( 14 );
-//    qfont.setBold( true );
-    PlayButton->setFont( qfont );
-    PlayButton->setGeometry( 400, 220, 90, 30 );
+    PlayButton->setGeometry( 400, 220, 100, 30 );
     PlayButton->show();
     connect( PlayButton, SIGNAL( clicked() ), SLOT( play() ) );
-
-//    sendPushButton = new QPushButton( centralWidget );
-//    sendPushButton->setGeometry( 410, 220, 70, 30 );
-//    qfont = sendPushButton->font();
-//    qfont.setPixelSize( 14 );
-//    qfont.setBold( true );
-//    sendPushButton->setFont( qfont );
-//    sendPushButton->setText( tr( "Send" ) );
-//    sendPushButton->setToolTip( tr( "Send Video" ) );
-//    connect( sendPushButton, SIGNAL( clicked() ), SLOT( send() ) );
-//    if ( needProgram( "xdg-email" ) )
-//      sendPushButton->setEnabled( true );
-//    else
-//      sendPushButton->setEnabled( false );
-    
-//    QLabel* label = new QLabel( centralWidget );
-//    label->setText("");
-//    label->setGeometry( QRect( 0, 0, 123, 240) );
-//    label->setAlignment( Qt::AlignCenter );
-//    label->show();
-//    QImage* qImage = new QImage( ":/pictures/VokoCola.png" );
-//    label->setPixmap(QPixmap::fromImage( *qImage, Qt::AutoColor) );
-//    label->setScaledContents( true );
 
     QMenu *m_imenu = new QMenu;
 
@@ -776,6 +659,26 @@ void screencast::openExternal(QString url)
 {
     QDesktopServices desk;
     desk.openUrl(QUrl(url));
+}
+
+QIcon screencast::rotateIcon(QString ico)
+{
+    QIcon icon(ico);
+    QSize sz;
+    for (int var = 0; var < icon.availableSizes().count(); ++var) {
+        if (icon.availableSizes().at(var).width() > sz.width())
+            sz = icon.availableSizes().at(var);
+    }
+    QPixmap pix = icon.pixmap(sz);
+    QTransform trans;
+    if (tabWidget->tabPosition() == QTabWidget::West)
+        trans.rotate(+90);
+    else
+        trans.rotate(-90);
+    pix = pix.transformed(trans);
+    icon = QIcon(pix);
+
+    return icon;
 }
 
 

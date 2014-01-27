@@ -11,7 +11,7 @@ QvkAlsaDevice::QvkAlsaDevice( QString value )
   //setChannel();
   setAlsaName();
   setAlsaSample();
-  qDebug() << "[vokoscreen] Find CaptureCard:" << getAlsaName();//<< "with channel:" << getChannel() << "and" << getAlsaSample() << "Hz";
+  qDebug() << "[recffmpeg] Find CaptureCard:" << getAlsaName();//<< "with channel:" << getChannel() << "and" << getAlsaSample() << "Hz";
 }
 
 
@@ -126,7 +126,7 @@ QString QvkAlsaDevice::getAlsaName()
 
 void QvkAlsaDevice::setChannel()
 {
-  // Beim Start von vokoscreen könnte ein Gerät belegt sein
+  // Beim Start von recffmpeg könnte ein Gerät belegt sein
   // Die Kanäle werden kurz vor der Aufnahme ermittelt.
   if ( isbusy() == false )  
   {  

@@ -7,32 +7,54 @@
         <file>pictures/start.png</file>
         <file>pictures/stop.png</file>
         <file>pictures/tools.png</file>
-        <file>language/vokoscreen_ar.qm</file>
-        <file>language/vokoscreen_ast.qm</file>
-        <file>language/vokoscreen_cs_CZ.qm</file>
-        <file>language/vokoscreen_da_DK.qm</file>
-        <file>language/vokoscreen_de_AT.qm</file>
-        <file>language/vokoscreen_de_CH.qm</file>
-        <file>language/vokoscreen_de_DE.qm</file>
-        <file>language/vokoscreen_es_ES.qm</file>
-        <file>language/vokoscreen_fr_FR.qm</file>
-        <file>language/vokoscreen_hu.qm</file>
-        <file>language/vokoscreen_it_CH.qm</file>
-        <file>language/vokoscreen_it_IT.qm</file>
-        <file>language/vokoscreen_nl_NL.qm</file>
-        <file>language/vokoscreen_pl_PL.qm</file>
-        <file>language/vokoscreen_pt_BR.qm</file>
-        <file>language/vokoscreen_ro_RO.qm</file>
-        <file>language/vokoscreen_ro.qm</file>
-        <file>language/vokoscreen_sv_SE.qm</file>
-        <file>language/vokoscreen_tr_TR.qm</file>
-        <file>language/vokoscreen_vi.qm</file>
-        <file>language/vokoscreen_zh_CN.qm</file>
-        <file>language/vokoscreen_zh_TW.qm</file>
         <file>pictures/micro.png</file>
         <file>pictures/monitor.png</file>
         <file>pictures/videooptionen.png</file>
         <file>pictures/magnifier.png</file>
         <file>pictures/recffmpeg.png</file>
+        <file>language/recffmpeg_ar.qm</file>
+        <file>language/recffmpeg_ar.ts</file>
+        <file>language/recffmpeg_ast.qm</file>
+        <file>language/recffmpeg_ast.ts</file>
+        <file>language/recffmpeg_cs_CZ.qm</file>
+        <file>language/recffmpeg_cs_CZ.ts</file>
+        <file>language/recffmpeg_da_DK.qm</file>
+        <file>language/recffmpeg_da_DK.ts</file>
+        <file>language/recffmpeg_de_AT.qm</file>
+        <file>language/recffmpeg_de_AT.ts</file>
+        <file>language/recffmpeg_de_CH.qm</file>
+        <file>language/recffmpeg_de_CH.ts</file>
+        <file>language/recffmpeg_de_DE.qm</file>
+        <file>language/recffmpeg_de_DE.ts</file>
+        <file>language/recffmpeg_es_ES.qm</file>
+        <file>language/recffmpeg_es_ES.ts</file>
+        <file>language/recffmpeg_fr_FR.qm</file>
+        <file>language/recffmpeg_fr_FR.ts</file>
+        <file>language/recffmpeg_hu.qm</file>
+        <file>language/recffmpeg_hu.ts</file>
+        <file>language/recffmpeg_it_CH.qm</file>
+        <file>language/recffmpeg_it_CH.ts</file>
+        <file>language/recffmpeg_it_IT.qm</file>
+        <file>language/recffmpeg_it_IT.ts</file>
+        <file>language/recffmpeg_nl_NL.qm</file>
+        <file>language/recffmpeg_nl_NL.ts</file>
+        <file>language/recffmpeg_pl_PL.qm</file>
+        <file>language/recffmpeg_pl_PL.ts</file>
+        <file>language/recffmpeg_pt_BR.qm</file>
+        <file>language/recffmpeg_pt_BR.ts</file>
+        <file>language/recffmpeg_ro_RO.qm</file>
+        <file>language/recffmpeg_ro_RO.ts</file>
+        <file>language/recffmpeg_ro.qm</file>
+        <file>language/recffmpeg_ro.ts</file>
+        <file>language/recffmpeg_sv_SE.qm</file>
+        <file>language/recffmpeg_sv_SE.ts</file>
+        <file>language/recffmpeg_tr_TR.qm</file>
+        <file>language/recffmpeg_tr_TR.ts</file>
+        <file>language/recffmpeg_vi.qm</file>
+        <file>language/recffmpeg_vi.ts</file>
+        <file>language/recffmpeg_zh_CN.qm</file>
+        <file>language/recffmpeg_zh_CN.ts</file>
+        <file>language/recffmpeg_zh_TW.qm</file>
+        <file>language/recffmpeg_zh_TW.ts</file>
     </qresource>
 </RCC>

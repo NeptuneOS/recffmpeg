@@ -30,29 +30,29 @@ AlsaDevice *alsa_device_sample( const char *device_name, unsigned int rate )
    if ( ( err = snd_pcm_open ( &dev->capture_handle, dev->device_name, SND_PCM_STREAM_CAPTURE, 0 ) ) < 0 )
    {
       rc = 0;
-      fprintf (stderr, "\033[0;31m[vokoscreen] alsa_device_sample() in alsadevice.c: cannot open audio device %s (%s)\033[0;0m\n", dev->device_name, snd_strerror (err) );
+      fprintf (stderr, "\033[0;31m[recffmpeg] alsa_device_sample() in alsadevice.c: cannot open audio device %s (%s)\033[0;0m\n", dev->device_name, snd_strerror (err) );
       return NULL;
    }
    else
    {
         rc = 1;
-        fprintf (stderr, "[vokoscreen] alsa_device_sample() in alsadevice.c: open audio device %s (%s)\n", dev->device_name, snd_strerror (err) );
+        fprintf (stderr, "[recffmpeg] alsa_device_sample() in alsadevice.c: open audio device %s (%s)\n", dev->device_name, snd_strerror (err) );
    }
 
    if ( ( err = snd_pcm_hw_params_malloc ( &hw_params ) ) < 0 )
    {
-      fprintf (stderr, "[vokoscreen] alsa_device_sample() in alsadevice.c: cannot allocate hardware parameter structure (%s)\n", snd_strerror( err ) );
+      fprintf (stderr, "[recffmpeg] alsa_device_sample() in alsadevice.c: cannot allocate hardware parameter structure (%s)\n", snd_strerror( err ) );
    }
 
    if ( ( err = snd_pcm_hw_params_any( dev->capture_handle, hw_params ) ) < 0 )
    {
-      fprintf (stderr, "[vokoscreen] alsa_device_sample() in alsadevice.c: cannot initialize hardware parameter structure (%s)\n", snd_strerror( err ) );
+      fprintf (stderr, "[recffmpeg] alsa_device_sample() in alsadevice.c: cannot initialize hardware parameter structure (%s)\n", snd_strerror( err ) );
    }
    
    
    if ( ( err = snd_pcm_hw_params_set_rate_near (dev->capture_handle, hw_params, &rate, 0 ) ) < 0 )
    {
-      fprintf( stderr, "[vokoscreen] alsa_device_sample() in alsadevice.c: cannot set sample rate (%s)\n", snd_strerror( err ) );
+      fprintf( stderr, "[recffmpeg] alsa_device_sample() in alsadevice.c: cannot set sample rate (%s)\n", snd_strerror( err ) );
       rc = 0;
    }
    else
@@ -61,7 +61,7 @@ AlsaDevice *alsa_device_sample( const char *device_name, unsigned int rate )
       rcSampleRate = rate;
    }
    
-   fprintf ( stderr, "[vokoscreen] alsa_device_sample() in alsadevice.c: Samplerate = %d\n", rate );
+   fprintf ( stderr, "[recffmpeg] alsa_device_sample() in alsadevice.c: Samplerate = %d\n", rate );
 
    snd_pcm_close( dev->capture_handle );
    free( dev->device_name );
@@ -147,7 +147,7 @@ AlsaDevice *alsa_device_busy( const char *device_name )
 
    if ( ( err = snd_pcm_open ( &dev->capture_handle, dev->device_name, SND_PCM_STREAM_CAPTURE, 0 ) ) < 0 )
    {
-      fprintf (stderr, "[vokoscreen] alsa_device_busy() in alsadevice.c: cannot open audio device %s (%s)\n", dev->device_name, snd_strerror (err) );
+      fprintf (stderr, "[recffmpeg] alsa_device_busy() in alsadevice.c: cannot open audio device %s (%s)\n", dev->device_name, snd_strerror (err) );
       rcBusy = 1;
       return NULL;
    }
