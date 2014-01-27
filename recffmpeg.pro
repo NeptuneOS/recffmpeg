@@ -15,7 +15,7 @@ SOURCES += main.cpp \
 
 RESOURCES += screencast.qrc
                         
-TRANSLATIONS = $$files(language/vokoscreen_*.ts)
+TRANSLATIONS = $$files(language/recffmpeg_*.ts)
                 
 # language packages
 !isEmpty(TRANSLATIONS) 

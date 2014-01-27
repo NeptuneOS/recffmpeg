@@ -103,12 +103,12 @@
         <translation>Player</translation>
     </message>
     <message>
-        <source>Vokoscreen minimized when recording starts</source>
-        <translation>Vokoscreen bei Aufnahme minimieren</translation>
+        <source>Minimize when recording starts</source>
+        <translation>Bei Aufnahme minimieren</translation>
     </message>
     <message>
-        <source>Start</source>
-        <translation>Start</translation>
+        <source>Record</source>
+        <translation>Aufnahme</translation>
     </message>
     <message>
         <source>Stop</source>
@@ -225,6 +225,10 @@
     <message>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
     </message>
 </context>
 </TS>

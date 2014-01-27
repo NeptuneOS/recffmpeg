@@ -32,7 +32,7 @@ int main(int argc, char** argv)
 
     if (app.isRunning())
     {
-      qDebug() << "[vokoscreen] vokoscreen can only be started once, vokoscreen runs";
+      qDebug() << "[recffmpeg] recffmpeg can only be started once and is running currently";
       return !app.sendMessage("aa");
     }
     
@@ -58,10 +58,10 @@ int main(int argc, char** argv)
     QLocale systemLocale = QLocale(QLatin1String(lang));
 
     QTranslator translator;
-    translator.load( "vokoscreen_" + systemLocale.name(), ":/language" );
+    translator.load( "recffmpeg_" + systemLocale.name(), ":/language" );
     app.installTranslator( &translator );
     qDebug();
-    qDebug() << "[vokoscreen]" << "Locale:" << systemLocale.name();
+    qDebug() << "[recffmpeg]" << "Locale:" << systemLocale.name();
     
     int vokoscreenWidth = 500;
     int vokoscreenHeight = 300;
