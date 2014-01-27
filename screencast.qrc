@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pictures/about.png</file>
+        <file>pictures/go.png</file>
+        <file>pictures/pause.png</file>
+        <file>pictures/sem_soc_net.png</file>
+        <file>pictures/start.png</file>
+        <file>pictures/stop.png</file>
+        <file>pictures/tools.png</file>
+        <file>language/vokoscreen_ar.qm</file>
+        <file>language/vokoscreen_ast.qm</file>
+        <file>language/vokoscreen_cs_CZ.qm</file>
+        <file>language/vokoscreen_da_DK.qm</file>
+        <file>language/vokoscreen_de_AT.qm</file>
+        <file>language/vokoscreen_de_CH.qm</file>
+        <file>language/vokoscreen_de_DE.qm</file>
+        <file>language/vokoscreen_es_ES.qm</file>
+        <file>language/vokoscreen_fr_FR.qm</file>
+        <file>language/vokoscreen_hu.qm</file>
+        <file>language/vokoscreen_it_CH.qm</file>
+        <file>language/vokoscreen_it_IT.qm</file>
+        <file>language/vokoscreen_nl_NL.qm</file>
+        <file>language/vokoscreen_pl_PL.qm</file>
+        <file>language/vokoscreen_pt_BR.qm</file>
+        <file>language/vokoscreen_ro_RO.qm</file>
+        <file>language/vokoscreen_ro.qm</file>
+        <file>language/vokoscreen_sv_SE.qm</file>
+        <file>language/vokoscreen_tr_TR.qm</file>
+        <file>language/vokoscreen_vi.qm</file>
+        <file>language/vokoscreen_zh_CN.qm</file>
+        <file>language/vokoscreen_zh_TW.qm</file>
+        <file>pictures/micro.png</file>
+        <file>pictures/monitor.png</file>
+        <file>pictures/videooptionen.png</file>
+        <file>pictures/magnifier.png</file>
+        <file>pictures/recffmpeg.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+?package(vokoscreen): \
+	needs="X11" \
+	section="Applications/Video" \
+	title="vokoscreen" \
+	command="vokoscreen" \
+	icon="/usr/share/pixmaps/vokoscreen.xpm"

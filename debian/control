@@ -1,0 +1,24 @@
+Source: vokoscreen
+Section: video
+Priority: optional
+Maintainer: Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Build-Depends: debhelper (>= 9), libasound2-dev, libopencv-dev, libqt4-dev,
+ kdelibs5-dev
+Standards-Version: 3.9.4
+Homepage: https://github.com/vkohaupt/vokoscreen
+Vcs-Git: git://anonscm.debian.org/collab-maint/vokoscreen.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/vokoscreen.git;a=summary
+
+Package: vokoscreen
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libav-tools, mkvtoolnix
+Description: easy to use screencast creator
+ vokoscreen can be used to record educational videos, live recordings
+ of browser, installation, videoconferences etc. You can capture an
+ alone video or video and sound (via ALSA or PusleAudio).
+ .
+ The program is very simple and uses a minimalistic GUI. It also can
+ capture your face using a webcam in the same time, so this feature is
+ especially suitable for screencasting purposes.
+ .
+ This program uses the avconv features.

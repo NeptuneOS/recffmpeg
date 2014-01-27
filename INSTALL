@@ -1,0 +1,35 @@
+Requires:
+  - Qt 4
+  - alsa
+  - libX11
+  - opencv
+  - libmp3lame0
+  - ffmpeg or avconv
+  - mkvtoolnix
+
+Optional:
+  - pulseaudio and pulsaudio-utils
+  
+BuildRequires:
+  - pkgconfig
+  - libqt4-devel
+  - alsa-devel
+  - libX11-devel
+  - opencv-devel
+  
+Compile:
+  - get sources
+    - extract vokoscren-<version>.tar
+     or
+    - clone git repository: "git clone https://github.com/vkohaupt/vokoscreen.git"
+  - change into the vokoscreen-<version> directory
+  - run "qmake"
+  - run "make"
+
+openSUSE:
+Install Schemata: QT 4-Development
+  
+Hint:
+To check that all external programs are installed,
+please run vokoscreen on the console and control
+the output section "---Begin Search external tools---"

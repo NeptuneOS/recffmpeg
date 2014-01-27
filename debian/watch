@@ -1,0 +1,2 @@
+version=3
+https://github.com/vkohaupt/vokoscreen/releases /tag/(\d.*)

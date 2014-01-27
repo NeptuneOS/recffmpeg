@@ -1,0 +1,10 @@
+[Desktop Entry]
+Comment=screencast
+Exec=recffmpeg
+Icon=recffmpeg
+Name=recffmpeg
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=AudioVideo;Recorder;
+Keywords=Audio;Video;Recorder;Screencast;
