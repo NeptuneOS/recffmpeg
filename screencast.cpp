@@ -547,21 +547,25 @@ screencast::screencast()
 
    // Abfrage einbauen ob Systemtray existiert
 
-   SystemTrayIconGreen = new QSystemTrayIcon( QIcon ( ":/pictures/start.png" ) );
+   QIcon recTray;
+   SystemTrayIconGreen = new QSystemTrayIcon( recTray.fromTheme("media-record") );
    SystemTrayIconGreen->show();
-   SystemTrayIconGreen->setToolTip( tr( "Start" ) );
+   SystemTrayIconGreen->setToolTip( tr( "Record" ) );
    
-   SystemTrayIconRed = new QSystemTrayIcon( QIcon ( ":/pictures/stop.png" ) );
+   QIcon stopTray;
+   SystemTrayIconRed = new QSystemTrayIcon( stopTray.fromTheme("media-playback-stop") );
    SystemTrayIconRed->hide();
    SystemTrayIconRed->setToolTip( tr( "Stop" ) );
    
-   SystemTrayIconYellow = new QSystemTrayIcon( QIcon ( ":/pictures/pause.png" ) );
+   QIcon pauseTray;
+   SystemTrayIconYellow = new QSystemTrayIcon( pauseTray.fromTheme("media-playback-pause") );
    SystemTrayIconYellow->hide();
    SystemTrayIconYellow->setToolTip( tr( "Pause" ) );
 
-   SystemTrayIconBlue = new QSystemTrayIcon( QIcon ( ":/pictures/go.png" ) );
+   QIcon startTray;
+   SystemTrayIconBlue = new QSystemTrayIcon( startTray.fromTheme("media-playback-start") );
    SystemTrayIconBlue->hide();
-   SystemTrayIconBlue->setToolTip( tr( "Go" ) );
+   SystemTrayIconBlue->setToolTip( tr( "Start" ) );
 
    connect( SystemTrayIconGreen,  SIGNAL( activated ( QSystemTrayIcon::ActivationReason ) ), this, SLOT( SystemTrayStart( QSystemTrayIcon::ActivationReason ) ) );
    connect( SystemTrayIconRed,    SIGNAL( activated ( QSystemTrayIcon::ActivationReason ) ), this, SLOT( SystemTrayStop( QSystemTrayIcon::ActivationReason ) ) );
