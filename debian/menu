@@ -1,6 +1,6 @@
-?package(vokoscreen): \
+?package(recffmpeg): \
 	needs="X11" \
 	section="Applications/Video" \
-	title="vokoscreen" \
-	command="vokoscreen" \
-	icon="/usr/share/pixmaps/vokoscreen.xpm"
+	title="Desktop Recorder" \
+	command="recffmpeg" \
+	icon="/usr/share/pixmaps/recffmpeg.png"

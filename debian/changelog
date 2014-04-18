@@ -1,30 +1,11 @@
-vokoscreen (1.8.5+git20131219+r159~149d48f+1~ubuntu13.10.1) saucy; urgency=low
+recffmpeg (1.8.5-neptune4) unstable; urgency=low
 
-  * Auto build.
+  * Fixed name string in *.desktop file
 
- -- Launchpad Package Builder <noreply@launchpad.net>  Thu, 19 Dec 2013 17:29:21 +0000
+ -- Leszek Lesner <leszek@zevenos.com>  Fri, 18 Apr 2014 10:56:04 +0000
 
-vokoscreen (1.8.2-1) unstable; urgency=low
+recffmpeg (1.8.5-neptune3) unstable; urgency=low
 
-  * New upstream release.
-  * debian/control: added little datails in long description.
-  * debian/gbp.conf: added to allow git-buildpackage use.
-  * debian/patches/screencast.cpp: removed because the upstream improved
-    the code to be compliant with Debian. Thanks to Volker.
+  * Initial release
 
- -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Tue, 03 Dec 2013 10:58:38 -0200
-
-vokoscreen (1.8.1-2) unstable; urgency=low
-
-  * Added the vokoscreen.cpp patch to make avconv the default option,
-      instead ffmpeg. Thanks to Vincent Bernat for the idea.
-  * debian/copyright: added the Public Domain notice for libqxt/qxtglobal.h.
-      Thanks to Charles Plessy.
-
- -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Sun, 17 Nov 2013 11:03:22 -0200
-
-vokoscreen (1.8.1-1) unstable; urgency=low
-
-  * Initial release (Closes: #729483).
-
- -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Thu, 14 Nov 2013 17:48:04 -0200
+ -- Leszek Lesner <leszek@zevenos.com>  Fri, 18 Apr 2014 10:24:41 +0000

@@ -3,7 +3,7 @@ Upstream-Name: vokoscreen
 Source: https://github.com/vkohaupt/vokoscreen
 
 Files: *
-Copyright: 2011-2013 Volker Kohaupt <vkohaupt@freenet.de>
+Copyright: 2011-2014 Volker Kohaupt <vkohaupt@freenet.de>
 License: GPL-2.0
 
 
@@ -30,7 +30,7 @@ License: BSD-3-clause
 
 
 Files: debian/*
-Copyright: 2013 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Copyright: 2013-2014 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 License: GPL-2.0
 
 
