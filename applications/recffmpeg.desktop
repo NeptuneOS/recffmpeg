@@ -1,9 +1,10 @@
 [Desktop Entry]
-Comment=screencast
+Name=Recffmpeg
+Comment=Screencast Application
 Exec=recffmpeg
 Icon=recffmpeg
-Name=Desktop Recorder
-Name[de]=Bildschirmaufzeichnung
+GenericName=Desktop Recorder
+GenericName[de]=Bildschirmaufzeichnung
 StartupNotify=false
 Terminal=false
 Type=Application
